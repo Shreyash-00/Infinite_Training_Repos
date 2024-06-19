@@ -1,7 +1,0 @@
-D:\Infinite_training\Day_1\CSharp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
-D:\Infinite_training\Day_1\CSharp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
-D:\Infinite_training\Day_1\CSharp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
-D:\Infinite_training\Day_1\CSharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
-D:\Infinite_training\Day_1\CSharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
-D:\Infinite_training\Day_1\CSharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
-D:\Infinite_training\Day_1\CSharp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
