@@ -10,7 +10,7 @@ class Remove_Char_01
     {
      public static void Remove_Character()
     {
-
+        //
         String Name = "Python";
         int position;
         WriteLine("Enter a position:");
