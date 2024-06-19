@@ -1,0 +1,6 @@
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1_02\bin\Debug\CoreChallenge1_02.exe.config
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1_02\bin\Debug\CoreChallenge1_02.exe
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1_02\bin\Debug\CoreChallenge1_02.pdb
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1_02\obj\Debug\Exchange_01.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1_02\obj\Debug\CoreChallenge1_02.exe
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1_02\obj\Debug\CoreChallenge1_02.pdb

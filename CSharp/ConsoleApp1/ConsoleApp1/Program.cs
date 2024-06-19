@@ -6,11 +6,13 @@ namespace ConsoleApp1
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Please enter your first name");
-			string Lname = Console.ReadLine();
-			Console.WriteLine("Please enter your last name");
-			string Rname = Console.ReadLine();
-			Console.WriteLine("Your first name is " +Lname+ " and your last name is " + Rname);
+			Console.WriteLine("Please enter your name:");
+			string name = Console.ReadLine();
+
+			Console.WriteLine("Please enter your age:");
+			int age = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("Your name is " + name + "! You are " + age + " years old.");
 			Console.ReadLine();
 		}
 	}

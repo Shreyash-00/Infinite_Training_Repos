@@ -1,0 +1,7 @@
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Checklargest\bin\Debug\Checklargest.exe.config
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Checklargest\bin\Debug\Checklargest.exe
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Checklargest\bin\Debug\Checklargest.pdb
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Checklargest\obj\Debug\Checklargest.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Checklargest\obj\Debug\Checklargest.exe
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Checklargest\obj\Debug\Checklargest.pdb
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Checklargest\obj\Debug\Checklargest.csproj.AssemblyReference.cache

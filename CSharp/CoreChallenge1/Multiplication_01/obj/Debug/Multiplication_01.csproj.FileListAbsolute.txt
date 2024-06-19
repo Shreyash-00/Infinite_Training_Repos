@@ -1,0 +1,7 @@
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Multiplication_01\bin\Debug\Multiplication_01.exe.config
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Multiplication_01\bin\Debug\Multiplication_01.exe
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Multiplication_01\bin\Debug\Multiplication_01.pdb
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Multiplication_01\obj\Debug\Multiplication_01.csproj.AssemblyReference.cache
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Multiplication_01\obj\Debug\Multiplication_01.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Multiplication_01\obj\Debug\Multiplication_01.exe
+D:\Infinite_training\Day_1\CSharp\CoreChallenge1\Multiplication_01\obj\Debug\Multiplication_01.pdb

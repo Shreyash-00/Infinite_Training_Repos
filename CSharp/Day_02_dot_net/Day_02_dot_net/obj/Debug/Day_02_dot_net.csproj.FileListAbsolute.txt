@@ -1,0 +1,7 @@
+D:\Infinite_training\Day_1\CSharp\Day_02_dot_net\Day_02_dot_net\bin\Debug\Day_02_dot_net.exe.config
+D:\Infinite_training\Day_1\CSharp\Day_02_dot_net\Day_02_dot_net\bin\Debug\Day_02_dot_net.exe
+D:\Infinite_training\Day_1\CSharp\Day_02_dot_net\Day_02_dot_net\bin\Debug\Day_02_dot_net.pdb
+D:\Infinite_training\Day_1\CSharp\Day_02_dot_net\Day_02_dot_net\obj\Debug\Day_02_dot_net.csproj.AssemblyReference.cache
+D:\Infinite_training\Day_1\CSharp\Day_02_dot_net\Day_02_dot_net\obj\Debug\Day_02_dot_net.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Day_1\CSharp\Day_02_dot_net\Day_02_dot_net\obj\Debug\Day_02_dot_net.exe
+D:\Infinite_training\Day_1\CSharp\Day_02_dot_net\Day_02_dot_net\obj\Debug\Day_02_dot_net.pdb
