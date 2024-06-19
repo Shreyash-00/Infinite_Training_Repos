@@ -1,7 +1,0 @@
-D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1\bin\Debug\CoreChallenge1.exe.config
-D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1\bin\Debug\CoreChallenge1.exe
-D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1\bin\Debug\CoreChallenge1.pdb
-D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1\obj\Debug\CoreChallenge1.csproj.AssemblyReference.cache
-D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1\obj\Debug\CoreChallenge1.csproj.CoreCompileInputs.cache
-D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1\obj\Debug\CoreChallenge1.exe
-D:\Infinite_training\Day_1\CSharp\CoreChallenge1\CoreChallenge1\obj\Debug\CoreChallenge1.pdb
