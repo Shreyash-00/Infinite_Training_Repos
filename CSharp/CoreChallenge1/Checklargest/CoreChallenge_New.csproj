@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckLargest_01.cs" />
+    <Compile Include="Exchange_01.cs" />
+    <Compile Include="Multiplication_02.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remove_Char_01.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -8,26 +8,17 @@ class Checklargest
 {
     static void Main()
     {
+        Remove_Char_01.Remove_Character();
+        WriteLine("-------------------------------------------First Question End--------------------------------------------------");
         
-        WriteLine("Enter the first Number:");
-        int num1 = int.Parse(ReadLine());
-
-       
-        WriteLine("Enter the second Number:");
-        int num2 = int.Parse(ReadLine());
-
-      
-        WriteLine("Enter the third Number:");
-        int num3 = int.Parse(ReadLine());
-
-        FindLargest(num1, num2, num3);
-    }
-
-    static void FindLargest(int a, int b, int c)
-    {
-        int largest = Math.Max(a, Math.Max(b, c));
-
-        WriteLine("The largest number is: " + largest);
+        Exchange_01.ExchangeChar();
+        WriteLine("-------------------------------------------Second Question End---------------------------------------------------------");
+        
+        CheckLargest_01.FindLargestNum();
+        WriteLine("-------------------------------------------Third Question End------------------------------------------------");
+        
+        Multiplication_02.Multiplication();
+        WriteLine("-------------------------------------------Forth Question End--------------------------------------------------------");
         ReadLine();
     }
 }

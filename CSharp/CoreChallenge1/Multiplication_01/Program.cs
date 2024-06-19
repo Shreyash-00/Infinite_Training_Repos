@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
-namespace Multiplication_01
-{
 
     class Program
     {
-        static void Main()
+        public static void Multiplication()
         {
            
             WriteLine("Enter the number:");
@@ -26,4 +24,3 @@ namespace Multiplication_01
             ReadLine();
         }
     }
-}
