@@ -255,7 +255,7 @@ public class Program
 {
     public static void Main()
     {
-        // Accounts example
+        // Accounts
         Accounts account1 = new Accounts("10354678", "Shreyash", "Savings");
 
         account1.TransactionType = 'D';
@@ -270,7 +270,7 @@ public class Program
 
         WriteLine();
 
-        // Student example
+        // Student 
         Student student1 = new Student(1, "Shreyash Srivastava", "12th", "Semester 1", "Science");
 
         int[] marks = { 80, 75, 60, 55, 70 };
@@ -281,23 +281,23 @@ public class Program
 
         WriteLine();
 
-        // Saledetails example
+        // Saledetails
         Saledetails sale1 = new Saledetails(1, 101, 25.5m, 5, DateTime.Now);
 
         WriteLine("Sales Details:");
         sale1.ShowData();
         WriteLine();
 
-        // Customer example
+        // Customer 
         Customer customer1 = new Customer(1001, "Shreyash", 23, "103573834", "Chennai");
 
         WriteLine("Customer Details:");
         customer1.DisplayCustomer();
         WriteLine();
 
-        // Example of using destructor
+        //  Destructor
         customer1 = null;
-        GC.Collect(); // Explicitly calling garbage collector to trigger destructor
+        GC.Collect(); 
         Read();
     }
 }
