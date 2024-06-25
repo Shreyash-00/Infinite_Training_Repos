@@ -10,13 +10,20 @@ namespace Assignment_02
     {
         static void Main(string[] args)
         {
-            Sum_two.Sum_two_three();
+            //Sum_two.Sum_two_three();
+            //Console.WriteLine("\n");
             Array_Manupulation.Array_Avg();
-            Marks.Marks_Function();
-            Copy_Array.Array_Copy();
-            Word_Length.Length();
-            Reverse.Reverse_word();
-            Check_Same_Word.Check_Word();
+            //Console.WriteLine("\n");
+            //Marks.Marks_Function();
+            //Console.WriteLine("\n");
+            //Copy_Array.Array_Copy();
+            //Console.WriteLine("\n");
+            //Word_Length.Length();
+            //Console.WriteLine("\n");
+            //Reverse.Reverse_word();
+            //Console.WriteLine("\n");
+            //Days.Days_week();
+            //Check_Same_Word.Check_Word();
             Console.Read();
         }
     }

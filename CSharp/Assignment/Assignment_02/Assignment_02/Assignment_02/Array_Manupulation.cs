@@ -10,12 +10,30 @@ namespace Assignment_02
     {
         public static void Array_Avg()
         {
-            int[] array = { 3, 9, 4, 1, 7, 2, 8, 5, 6 };
+            Console.WriteLine("length of Array :");
+            string str = Console.ReadLine();
+            int Arr_Size = Convert.ToInt32(str);
+            int[] array = new int[Arr_Size];
+            
+            for(int i = 0; i < Arr_Size; i++)
+            {
+                Console.WriteLine($"Write the {i}th member of array :");
+                array[i]= Convert.ToInt32(Console.ReadLine());
+                
+            }
+
+            for (int i = 0; i < Arr_Size; i++)
+            {
+
+                Console.WriteLine($"{array[i]}"); 
+
+            }
+            //int[] array = { 3, 9, 4, 1, 7, 2, 8, 5, 6 };
 
             double average = CalculateAverage(array);
             Console.WriteLine($"Average value of array elements: {average}");
 
-            
+
             int minimum = FindMinimum(array);
             int maximum = FindMaximum(array);
             Console.WriteLine($"Minimum value in the array: {minimum}");
@@ -23,41 +41,36 @@ namespace Assignment_02
         }
         static double CalculateAverage(int[] array)
         {
-            if (array.Length == 0)
+            double avg;
+            int sum = 0;
+            for (int i = 0; i < array.Length; i++)
             {
-                throw new ArgumentException("Array must not be empty.");
+                sum = array[i] + sum;
             }
-
-            double sum = 0;
-            foreach (int num in array)
-            {
-                sum += num;
-            }
-
-            return sum / array.Length;
+            avg = sum / array.Length;
+            return avg;
         }
 
-   
+
         static int FindMinimum(int[] array)
         {
-            if (array.Length == 0)
-            {
-                throw new ArgumentException("Array must not be empty.");
-            }
+            int minValue = int.MaxValue;
 
-            int min = array[0];
-            for (int i = 1; i < array.Length; i++)
+            // Iterate through the array to find the minimum value
+            for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] < min)
+                if (array[i] < minValue)
                 {
-                    min = array[i];
+                    minValue = array[i];
                 }
             }
 
-            return min;
+            // Return the minimum value found
+            return minValue;
+
         }
 
-        
+
         static int FindMaximum(int[] array)
         {
             if (array.Length == 0)
