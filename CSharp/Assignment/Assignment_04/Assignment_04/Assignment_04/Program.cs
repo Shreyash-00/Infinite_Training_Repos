@@ -1,74 +1,78 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
 public class Program
 {
     public static void Main(string[] args)
     {
         // Program 1: Display First Name and Last Name in Uppercase
-        Console.WriteLine("Program 1: Enter your First Name:");
-        string firstName = Console.ReadLine();
+        WriteLine("Program 1: Enter your First Name:");
+        string firstName = ReadLine();
 
-        Console.WriteLine("Enter your Last Name:");
-        string lastName = Console.ReadLine();
+        WriteLine("Enter your Last Name:");
+        string lastName = ReadLine();
 
         DisplayNamesInUppercase(firstName, lastName);
-        Console.WriteLine();
+        WriteLine();
 
         // Program 2: Count Occurrences of a Letter in a String
-        Console.WriteLine("Program 2: Enter a string:");
-        string input = Console.ReadLine();
+        WriteLine("Program 2: Enter a string:");
+        string input = ReadLine();
 
-        Console.WriteLine("Enter the letter to count:");
-        char letter = Console.ReadLine()[0]; // Read first character as the letter
+        WriteLine("Enter the letter to count:");
+        char letter = ReadLine()[0]; // Read first character as the letter
 
         int count = CountOccurrences(input, letter);
-        Console.WriteLine($"The letter '{letter}' appears {count} times in the string.");
-        Console.WriteLine();
+        WriteLine($"The letter '{letter}' appears {count} times in the string.");
+        WriteLine();
 
         // Program 3: Banking System with Custom Exception Handling
-        Console.WriteLine("Program 3: Banking System Example");
+        WriteLine("Program 3: Banking System Example");
 
-        Console.WriteLine("Enter initial balance:");
-        double initialBalance = Convert.ToDouble(Console.ReadLine());
+        WriteLine("Enter initial balance:");
+        double initialBalance = Convert.ToDouble(ReadLine());
         BankingSystem account = new BankingSystem(initialBalance);
 
         try
         {
-            Console.WriteLine($"Initial balance: {account.CheckBalance()}");
-            Console.WriteLine("Enter deposit amount:");
-            double depositAmount = Convert.ToDouble(Console.ReadLine());
+            WriteLine($"Initial balance: {account.CheckBalance()}");
+            WriteLine("Enter deposit amount:");
+            double depositAmount = Convert.ToDouble(ReadLine());
             account.Deposit(depositAmount);
 
-            Console.WriteLine($"Enter withdrawal amount (It will throw Insufficient_Balance_Exception if more than balance):");
-            double withdrawalAmount = Convert.ToDouble(Console.ReadLine());
+            WriteLine($"Enter withdrawal amount (It will throw Insufficient_Balance_Exception if more than balance):");
+            double withdrawalAmount = Convert.ToDouble(ReadLine());
             account.Withdraw(withdrawalAmount);
         }
         catch (InsufficientBalanceException ex)
         {
-            Console.WriteLine($"Exception : {ex.Message}");
+            WriteLine($"Exception : {ex.Message}");
         }
-        Console.WriteLine();
+        WriteLine();
 
         // Program 4: Scholarship Class with Calculation Based on Marks
-        Console.WriteLine("Program 4: Scholarship Calculation Example");
+        WriteLine("Program 4: Scholarship Calculation Example");
 
-        Console.WriteLine("Enter marks :");
-        int marks = Convert.ToInt32(Console.ReadLine());
+        WriteLine("Enter marks :");
+        int marks = Convert.ToInt32(ReadLine());
 
-        Console.WriteLine("Enter fees amount:");
-        double fees = Convert.ToDouble(Console.ReadLine());
+        WriteLine("Enter fees amount:");
+        double fees = Convert.ToDouble(ReadLine());
 
         Scholarship scholarship = new Scholarship();
         double amount = scholarship.CalculateScholarship(marks, fees);
-        Console.WriteLine($"Scholarship amount for marks {marks} is: {amount}");
+        WriteLine($"Scholarship amount for marks {marks} is: {amount}");
 
-        Console.ReadLine();
+        ReadLine();
     }
 
     public static void DisplayNamesInUppercase(string firstName, string lastName)
     {
-        Console.WriteLine(firstName.ToUpper());
-        Console.WriteLine(lastName.ToUpper());
+        WriteLine(firstName.ToUpper());
+        WriteLine(lastName.ToUpper());
     }
 
     public static int CountOccurrences(string input, char letter)
@@ -97,7 +101,7 @@ public class BankingSystem
     public void Deposit(double amount)
     {
         balance += amount;
-        Console.WriteLine($"Deposit of {amount} successful. Current balance: {balance}");
+        WriteLine($"Deposit of {amount} successful. Current balance: {balance}");
     }
 
     public void Withdraw(double amount)
@@ -109,7 +113,7 @@ public class BankingSystem
         else
         {
             balance -= amount;
-            Console.WriteLine($"Withdrawal of {amount} successful. Current balance: {balance}");
+            WriteLine($"Withdrawal of {amount} successful. Current balance: {balance}");
         }
     }
 
