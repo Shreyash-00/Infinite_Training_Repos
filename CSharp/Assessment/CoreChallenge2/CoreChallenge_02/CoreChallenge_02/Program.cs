@@ -69,8 +69,8 @@ namespace CoreChallenge_02
 
     public class NegativeNumberException : Exception
     {
-        public NegativeNumberException()
-            : base("Number cannot be negative.")
+        public NegativeNumberException(int number)
+            : base($"Number{number} cannot be negative.")
         {
         }
     }
@@ -81,81 +81,81 @@ namespace CoreChallenge_02
         public static void Main(string[] args)
         {
             
-            WriteLine("Enter name of undergraduate student:");
-            string undergradName = ReadLine();
+            //WriteLine("Enter name of undergraduate student:");
+            //string undergradName = ReadLine();
 
-            WriteLine("Enter student ID of undergradate student:");
-            int undergradId = int.Parse(ReadLine());
+            //WriteLine("Enter student ID of undergradate student:");
+            //int undergradId = int.Parse(ReadLine());
 
-            WriteLine("Enter marks of undergradate student:");
-            double undergradMarks = double.Parse(ReadLine());
+            //WriteLine("Enter marks of undergradate student:");
+            //double undergradMarks = double.Parse(ReadLine());
 
-            Undergraduate undergrad = new Undergraduate(undergradName, undergradId, undergradMarks);
+            //Undergraduate undergrad = new Undergraduate(undergradName, undergradId, undergradMarks);
 
-            WriteLine($"{undergrad.Name} passed: {undergrad.IsPassed(undergrad.Marks)}");
-            WriteLine("-------------------------------------------Result End------------------------------------------");
+            //WriteLine($"{undergrad.Name} passed: {undergrad.IsPassed(undergrad.Marks)}");
+            //WriteLine("-------------------------------------------Result End------------------------------------------");
 
-            WriteLine("Enter name of graduate student:");
-            string gradName = ReadLine();
+            //WriteLine("Enter name of graduate student:");
+            //string gradName = ReadLine();
 
-            WriteLine("Enter student ID of graduate student:");
-            int gradId = int.Parse(ReadLine());
+            //WriteLine("Enter student ID of graduate student:");
+            //int gradId = int.Parse(ReadLine());
 
-            WriteLine("Enter marks of graduate student:");
-            double gradMarks = double.Parse(ReadLine());
+            //WriteLine("Enter marks of graduate student:");
+            //double gradMarks = double.Parse(ReadLine());
 
-            Graduate grad = new Graduate(gradName, gradId, gradMarks);
+            //Graduate grad = new Graduate(gradName, gradId, gradMarks);
 
-            WriteLine($"{grad.Name} passed: {grad.IsPassed(grad.Marks)}");
-            WriteLine("-------------------------------Result End------------------------------------------");
+            //WriteLine($"{grad.Name} passed: {grad.IsPassed(grad.Marks)}");
+            //WriteLine("-------------------------------Result End------------------------------------------");
 
-            ReadLine();
+            //ReadLine();
             
 
             
-            Product[] products = new Product[10];
+            Product[] products = new Product[3];
 
-           
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    WriteLine($"Enter details for Product {i + 1}:");
 
-            //    Write("Product ID: ");
-            //    int productId = int.Parse(ReadLine());
+            for (int i = 0; i < 3; i++)
+            {
+                WriteLine($"Enter details for Product {i + 1}:");
 
-            //    Write("Product Name: ");
-            //    string productName = ReadLine();
+                Write("Product ID: ");
+                int productId = int.Parse(ReadLine());
 
-            //    Write("Price: ");
-            //    int price = int.Parse(ReadLine());
+                Write("Product Name: ");
+                string productName = ReadLine();
 
-            //    products[i] = new Product(productId, productName, price);
-            //}
+                Write("Price: ");
+                int price = int.Parse(ReadLine());
 
-            
-            //for (int i = 0; i < products.Length - 1; i++)
-            //{
-            //    int minIndex = i;
-            //    for (int j = i + 1; j < products.Length; j++)
-            //    {
-            //        if (products[j].Price < products[minIndex].Price)
-            //        {
-            //            minIndex = j;
-            //        }
-            //    }
+                products[i] = new Product(productId, productName, price);
+            }
 
-            //    Product temp = products[minIndex];
-            //    products[minIndex] = products[i];
-            //    products[i] = temp;
-            //}
 
-            //WriteLine("\nProducts Sorted by Price:");
-            //foreach (var product in products)
-            //{
-            //    WriteLine(product);
-            //}
+            for (int i = 0; i < products.Length - 1; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < products.Length; j++)
+                {
+                    if (products[j].Price < products[minIndex].Price)
+                    {
+                        minIndex = j;
+                    }
+                }
 
-        
+                Product temp = products[minIndex];
+                products[minIndex] = products[i];
+                products[i] = temp;
+            }
+
+            WriteLine("\nProducts Sorted by Price:");
+            foreach (var product in products)
+            {
+                WriteLine(product);
+            }
+
+
             try
             {
                 Write("\nEnter a number: ");
@@ -185,7 +185,7 @@ namespace CoreChallenge_02
         {
             if (number < 0)
             {
-                throw new NegativeNumberException();
+                throw new NegativeNumberException(number);
             }
         }
     }
