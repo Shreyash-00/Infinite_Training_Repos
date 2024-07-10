@@ -32,7 +32,7 @@ class Program
     // Program 1: Append Text to a File
     static void AppendTextToFile()
     {
-        WriteLine("--------------- Program 1: Append Text to a File ---------------");
+        Console.WriteLine("--------------- Program 1: Append Text to a File ---------------");
 
         string directoryPath = @"D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4";
 
@@ -43,7 +43,8 @@ class Program
 
         string filePath = Path.Combine(directoryPath, "DemoTest.txt");
 
-        string textToAppend = "My name is Shreyash Srivastava.\n";
+        Console.WriteLine("Enter the text to append:");
+        string textToAppend = Console.ReadLine() + "\n"; // Read user input and append a newline
 
         try
         {
@@ -52,14 +53,15 @@ class Program
                 writer.Write(textToAppend);
             }
 
-            WriteLine("Text appended to the file successfully.");
+            Console.WriteLine("Text appended to the file successfully.");
         }
         catch (Exception ex)
         {
-            throw new Exception($"Error appending text to file: {ex.Message}");
+            Console.WriteLine($"Error appending text to file: {ex.Message}");
         }
 
-        WriteLine("--------------------------------------------------------------");
+        Console.WriteLine("--------------------------------------------------------------");
+
     }
 
     // Program 2: Calculator Application
