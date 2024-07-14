@@ -1,0 +1,155 @@
+--Creating a database 
+Create database Assignment_02
+
+use Assignment_02;
+--creation of Emp table
+CREATE TABLE EMP(
+    EMPNO   int  PRIMARY KEY,
+    ENAME   VARCHAR(20),
+    JOB     VARCHAR(20),
+    MGR_ID  int,
+    HIREDATE DATE,
+    SAL     int,
+    COMM    int,
+    DEPTNO int
+)
+
+--inserting data in Emp table
+INSERT INTO EMP (EMPNO, ENAME, JOB, MGR_ID, HIREDATE, SAL, COMM, DEPTNO) VALUES
+(7369, 'SMITH', 'CLERK', 7902, '17-DEC-80', 800, NULL, 20),
+(7499, 'ALLEN', 'SALESMAN', 7698, '20-FEB-81', 1600, 300, 30),
+(7521, 'WARD', 'SALESMAN', 7698, '22-FEB-81', 1250, 500, 30),
+(7566, 'JONES', 'MANAGER', 7839, '02-APR-81', 2975, NULL, 20),
+(7654, 'MARTIN', 'SALESMAN', 7698, '28-SEP-81',  1250, 1400, 30),
+(7698, 'BLAKE', 'MANAGER', 7839, '01-MAY-81',  2850, NULL, 30),
+(7782, 'CLARK', 'MANAGER', 7839, '09-JUN-81', 2450, NULL, 10),
+(7788, 'SCOTT', 'ANALYST', 7566, '19-APR-87',  3000, NULL, 20),
+(7839, 'KING', 'PRESIDENT', NULL, '17-NOV-81',  5000, NULL, 10),
+(7844, 'TURNER', 'SALESMAN', 7698, '08-SEP-81',  1500, 0, 30),
+(7876, 'ADAMS', 'CLERK', 7788, '23-MAY-87', 1100, NULL, 20),
+(7900, 'JAMES', 'CLERK', 7698, '03-DEC-81',  950, NULL, 30),
+(7902, 'FORD', 'ANALYST', 7566, '03-DEC-81', 3000, NULL, 20),
+(7934, 'MILLER', 'CLERK', 7782, '23-JAN-82',  1300, NULL, 10)
+
+select * from EMP
+
+
+--Creation of DEPT Table
+CREATE TABLE DEPT (
+    DEPTNO  int PRIMARY KEY,
+    DNAME   VARCHAR(15),
+    LOC     VARCHAR(15)
+)
+
+--inserting data into DEPT table
+INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES
+(10, 'ACCOUNTING', 'NEW YORK'),
+(20, 'RESEARCH', 'DALLAS'),
+(30, 'SALES', 'CHICAGO'),
+(40, 'OPERATIONS', 'BOSTON')
+
+--query to get dept table data
+select * from DEPT
+
+-- All employees whose name begins with 'A'.
+SELECT *
+FROM EMP
+WHERE ENAME LIKE 'A%'
+
+--All thse employees who don't have a manager.
+SELECT *
+FROM EMP
+WHERE MGR_ID IS NULL
+
+-- List employee name, number, and salary for those employees who earn in the range 1200 to 1400.
+SELECT ENAME, EMPNO, SAL
+FROM EMP
+WHERE SAL BETWEEN 1200 AND 1400
+
+-- Provide a 10% salary increase to all employees in the RESEARCH dept.
+-- Check salry details of these employees before .
+
+SELECT *
+FROM EMP
+WHERE DEPTNO = 20
+
+-- Apply 10% pay rise
+UPDATE EMP
+SET SAL = SAL * 1.1
+WHERE DEPTNO = 20
+
+-- After the pay rise
+SELECT *
+FROM EMP
+WHERE DEPTNO = 20
+
+
+--Find the number of CLERKS employed. Give it a descriptive heading.
+SELECT COUNT(*) AS "Number of Clerks"
+FROM EMP
+WHERE JOB = 'CLERK'
+
+--Find the average salary for each job type and the number of people employed in each job.
+SELECT JOB, AVG(SAL) AS "Average Salary", COUNT(*) AS "Number of Employees"
+FROM EMP
+GROUP BY JOB
+
+--List the employees with the lowest and highest salary.
+SELECT *
+FROM EMP
+WHERE SAL IN (SELECT MIN(SAL) FROM EMP)
+   OR SAL IN (SELECT MAX(SAL) FROM EMP)
+
+
+--List full details of departments that don't have any employees.
+SELECT *
+FROM DEPT
+WHERE DEPTNO NOT IN (SELECT DISTINCT DEPTNO FROM EMP)
+
+--Getname&salaries of analysts in department 20 earning over 1200.
+--Sort results alphabetically by name in ascending order.
+
+SELECT ENAME, SAL
+FROM EMP
+WHERE JOB = 'ANALYST' AND SAL > 1200 AND DEPTNO = 20
+ORDER BY ENAME ASC
+
+
+--List each department's name, number, and total salary paid to its employees.
+
+SELECT DNAME, DEPT.DEPTNO, SUM(SAL) AS "Total Salary"
+FROM EMP
+JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+GROUP BY DEPT.DEPTNO, DNAME;
+
+
+
+-- Find out salary of both MILLER and SMITH.
+SELECT ENAME, SAL
+FROM EMP
+WHERE ENAME IN ('MILLER', 'SMITH')
+
+
+--Find out the names of the employees whose name begin with ‘A’ or ‘M’.
+SELECT ENAME
+FROM EMP
+WHERE ENAME LIKE 'A%' OR ENAME LIKE 'M%'
+
+
+--Compute yearly salary of SMITH.
+SELECT ENAME, SAL * 12 AS "Yearly Salary"
+FROM EMP
+WHERE ENAME = 'SMITH'
+
+--List the name and salary for all employees whose salary is not in the range of 1500 and 2850.
+SELECT ENAME, SAL
+FROM EMP
+WHERE SAL NOT BETWEEN 1500 AND 2850
+
+
+-- Find all managers who have more than 2 employees reporting to them.
+SELECT E.ENAME AS "Manager Name", COUNT(*) AS "Number of Direct Reports"
+FROM EMP E
+JOIN EMP M ON E.EMPNO = M.MGR_ID
+GROUP BY E.ENAME
+HAVING COUNT(*) > 2
