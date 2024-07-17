@@ -249,7 +249,7 @@ class Program
 
     static int GetIntInput(string prompt)
     {
-        int result;
+        int result; 
         while (true)
         {
             Write($"{prompt}: ");

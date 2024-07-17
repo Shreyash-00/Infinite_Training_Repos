@@ -1,0 +1,136 @@
+create database Assesment_02
+
+use Assesment_02
+
+CREATE TABLE Birth_day (
+    Id int PRIMARY KEY,
+    Name varchar(50),
+    BirthDate date
+);
+ 
+--  Insert 
+INSERT INTO Birth_day (Id, Name, BirthDate)
+VALUES (1, 'Shreyash', '2001-11-15');
+ 
+select * from Birth_day
+
+SELECT Name, BirthDate, DATENAME(weekday, BirthDate) 
+FROM Birth_day
+WHERE Id = 1;
+ 
+ --2))-----------------------------Birthday
+SELECT Name, BirthDate, DATEDIFF(day, BirthDate, GETDATE()) 
+FROM Birth_day
+WHERE Id = 1;
+
+CREATE TABLE EMP_New_01(
+    EMPNO   int  PRIMARY KEY,
+    ENAME   VARCHAR(20),
+    JOB     VARCHAR(20),
+    MGR_ID  int,
+    HIREDATE DATE,
+    SAL     int,
+    COMM    int,
+    DEPTNO int
+)
+
+--inserting data in Emp table
+INSERT INTO EMP_New_01 (EMPNO, ENAME, JOB, MGR_ID, HIREDATE, SAL, COMM, DEPTNO) VALUES
+(7369, 'SMITH', 'CLERK', 7902, '17-DEC-21', 800, NULL, 20),
+(7499, 'ALLEN', 'SALESMAN', 7698, '20-FEB-81', 1600, 300, 30),
+(7521, 'WARD', 'SALESMAN', 7698, '22-FEB-81', 1250, 500, 30),
+(7566, 'JONES', 'MANAGER', 7839, '02-APR-22', 2975, NULL, 20),
+(7654, 'MARTIN', 'SALESMAN', 7698, '28-SEP-22',  1250, 1400, 30),
+(7698, 'BLAKE', 'MANAGER', 7839, '01-MAY-81',  2850, NULL, 30),
+(7782, 'CLARK', 'MANAGER', 7839, '09-JUN-81', 2450, NULL, 10),
+(7788, 'SCOTT', 'ANALYST', 7566, '19-APR-87',  3000, NULL, 20),
+(7839, 'KING', 'PRESIDENT', NULL, '17-NOV-21',  5000, NULL, 10),
+(7844, 'TURNER', 'SALESMAN', 7698, '08-SEP-81',  1500, 0, 30),
+(7876, 'ADAMS', 'CLERK', 7788, '23-MAY-87', 1100, NULL, 20),
+(7900, 'JAMES', 'CLERK', 7698, '03-DEC-21',  950, NULL, 30),
+(7902, 'FORD', 'ANALYST', 7566, '03-DEC-23', 3000, NULL, 20),
+(7934, 'MILLER', 'CLERK', 7782, '23-JAN-24',  1300, NULL, 10)
+
+select * from EMP_New_01
+
+-- Update 
+UPDATE EMP_New_01
+SET HIREDATE = DATEADD(YEAR,-5,HIREDATE) 
+WHERE HIREDATE > DATEADD(MONTH,DATEDIFF(MONTH,0,GETDATE()),-60);
+ 
+--dISPLAY
+SELECT *
+FROM EMP_New_01
+WHERE HIREDATE < DATEADD(MONTH,DATEDIFF(MONTH,0,GETDATE()),-60)
+AND MONTH(HIREDATE)=MONTH(GETDATE());
+
+
+
+------ 4)) Create table Employee with empno, ename, sal, doj columns and perform the following operations in a single transaction
+
+
+-- Create the Employee table
+CREATE TABLE Employee_New_01 (
+    empno INT PRIMARY KEY,
+    ename VARCHAR(50),
+    sal DECIMAL(10, 2),
+    doj DATE
+);
+
+BEGIN TRANSACTION;
+ 
+--  Insert \
+INSERT INTO Employee_New_01 (empno, ename, sal, doj)
+VALUES
+    (1, 'John Doe', 50000, '2023-01-15'),
+    (2, 'Jane Smith', 60000, '2022-05-20'),
+    (3, 'Michael Brown', 55000, '2023-03-10');
+ 
+-- Update\
+UPDATE Employee_New_01
+SET sal = sal * 1.15
+WHERE empno = 2;
+ 
+--Delete 
+DELETE FROM Employee_New_01
+WHERE empno = 1;
+ 
+--commit trans
+COMMIT;
+ 
+-- Retrieve the deleted row
+SELECT *
+FROM Employee_New_01
+WHERE empno = 1;
+
+
+---5))------------------------- CalculateBonus fnx-------------------
+
+
+IF OBJECT_ID('CalculateBonus') IS NOT NULL
+    DROP FUNCTION CalculateBonus;
+GO
+ 
+-- Create new CalculateBonus function
+CREATE FUNCTION CalculateBonus (
+    @deptno INT,
+    @sal DECIMAL(10, 2)
+)
+RETURNS DECIMAL(10, 2)
+AS
+BEGIN
+    DECLARE @bonus DECIMAL(10, 2);
+ 
+    IF @deptno = 10
+        SET @bonus = @sal * 0.15;  -- 15% bonus 
+    ELSE IF @deptno = 20
+        SET @bonus = @sal * 0.20;  -- 20% bonus 
+    ELSE
+        SET @bonus = @sal * 0.05;  -- 5% bonus s
+ 
+    RETURN @bonus;
+END;
+GO
+
+SELECT empno, ename, sal, deptno, dbo.CalculateBonus(deptno, sal) AS bonus
+FROM EMP_New_01;
