@@ -1,0 +1,7 @@
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_ADO\Demo_ADO\bin\Debug\Demo_ADO.exe.config
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_ADO\Demo_ADO\bin\Debug\Demo_ADO.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_ADO\Demo_ADO\bin\Debug\Demo_ADO.pdb
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_ADO\Demo_ADO\obj\Debug\Demo_ADO.csproj.AssemblyReference.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_ADO\Demo_ADO\obj\Debug\Demo_ADO.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_ADO\Demo_ADO\obj\Debug\Demo_ADO.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_ADO\Demo_ADO\obj\Debug\Demo_ADO.pdb

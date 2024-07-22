@@ -1,0 +1,7 @@
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_table_Ex\Demo_table_Ex\bin\Debug\Demo_table_Ex.exe.config
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_table_Ex\Demo_table_Ex\bin\Debug\Demo_table_Ex.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_table_Ex\Demo_table_Ex\bin\Debug\Demo_table_Ex.pdb
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_table_Ex\Demo_table_Ex\obj\Debug\Demo_table_Ex.csproj.AssemblyReference.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_table_Ex\Demo_table_Ex\obj\Debug\Demo_table_Ex.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_table_Ex\Demo_table_Ex\obj\Debug\Demo_table_Ex.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Demo_table_Ex\Demo_table_Ex\obj\Debug\Demo_table_Ex.pdb
