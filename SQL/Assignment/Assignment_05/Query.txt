@@ -1,0 +1,44 @@
+
+create database Assignment_05
+use Assignment_05;
+
+create or alter procedure Get_Pay_slip
+    @EmployeeID int,
+    @Salary float
+as
+begin
+   declare @HRA float
+   declare @DA float
+   declare @PF float
+   declare @IT float
+   declare @Deductions float
+   declare @GrossSalary float
+   declare @NetSalary float
+
+    -- Calculate HRA, DA, PF, and IT
+    set @HRA = 0.10 * @Salary
+    set @DA = 0.20 * @Salary
+    set @PF = 0.08 * @Salary
+    set @IT = 0.05 * @Salary
+
+    -- deductions
+    set @Deductions = @PF + @IT
+
+    -- Gross Salary
+    set @GrossSalary = @Salary + @HRA + @DA
+
+    -- Net Salary
+    set @NetSalary = @GrossSalary - @Deductions
+
+    -- Display the paySlip
+    select 'Employee ID: ' + CAST(@EmployeeID as varchar(10)) as 'PaySlip',
+           'Basic Salary: ' + CAST(@Salary as varchar(10)) as ' ',
+           'HRA: ' + CAST(@HRA as varchar(10)) as ' ',
+           'DA: ' + CAST(@DA as varchar(10)) as ' ',
+           'PF: ' + CAST(@PF as varchar(10)) as ' ',
+           'IT: ' + CAST(@IT as varchar(10)) as ' ',
+           'Deductions: ' + CAST(@Deductions as varchar(10)) as ' ',
+           'Gross Salary: ' + CAST(@GrossSalary as varchar(10)) as ' ',
+           'Net Salary: ' + CAST(@NetSalary as varchar(10)) as ' '
+end
+EXEC Get_Pay_slip @EmployeeID = 1, @Salary = 670000.00
