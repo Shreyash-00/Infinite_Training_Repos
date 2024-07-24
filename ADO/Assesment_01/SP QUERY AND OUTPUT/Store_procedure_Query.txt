@@ -1,0 +1,37 @@
+-- Create Databse Employeemanagement
+
+create database Employeemanagement;
+
+use Employeemanagement;
+
+-- Create table Employee_Details
+
+create table Employee_Details(Empno int primary key identity(1,1),
+EmpName varchar(50) not null,
+Empsal numeric(10,2) check (Empsal>=25000),
+Emptype char(1) check (Emptype in ('F','P')));
+
+select * from Employee_Details;
+
+-- Create store procedure to add new rows
+
+create procedure AddEmp_Sp
+
+@empname varchar(50),
+@empsal numeric(10,2),
+@emptype char(1)
+as 
+begin
+insert into Employee_Details(EmpName,Empsal,Emptype)
+values(@empname,@empsal,@emptype);
+end;
+
+-- Check Procedure
+
+AddEmp_Sp 'Shreyash',30000,'F'
+
+AddEmp_Sp 'Ayush',25000,'P'
+
+select * from Employee_Details;
+
+
