@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="infiniteDB" Class="LSQCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ICS-LT-JN27893;Initial Catalog=infiniteDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="LINQ_INJ.Properties.Settings" SettingsPropertyName="infiniteDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EMP" Member="EMPs">
+    <Type Name="EMP">
+      <Column Name="EMPNO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ENAME" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="JOB" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MGR_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HIREDATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DEPTNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remarks" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

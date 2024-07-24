@@ -1,0 +1,6 @@
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Building_Relations\Building_Relations\bin\Debug\Building_Relations.exe.config
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Building_Relations\Building_Relations\bin\Debug\Building_Relations.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Building_Relations\Building_Relations\bin\Debug\Building_Relations.pdb
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Building_Relations\Building_Relations\obj\Debug\Building_Relations.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Building_Relations\Building_Relations\obj\Debug\Building_Relations.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Building_Relations\Building_Relations\obj\Debug\Building_Relations.pdb

@@ -97,7 +97,7 @@ namespace Demo_ADO
                 }
             }
 
-            Console.ReadLine(); // Pause to view the output
+            Console.ReadLine(); 
         }
     }
 }

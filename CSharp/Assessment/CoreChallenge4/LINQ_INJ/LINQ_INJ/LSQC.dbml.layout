@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LSQC">
+  <DataContextMoniker Name="/LSQCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b65aee6b-2190-4170-a467-21d3d43abcea" absoluteBounds="1.5, 2.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/LSQCDataContext/EMP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96c47167-252a-40c3-ac2c-0f89fb95986f" absoluteBounds="1.5150000000000001, 2.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

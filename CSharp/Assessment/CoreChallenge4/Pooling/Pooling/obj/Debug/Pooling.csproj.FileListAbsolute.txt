@@ -1,0 +1,7 @@
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Pooling\Pooling\obj\Debug\Pooling.csproj.AssemblyReference.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Pooling\Pooling\obj\Debug\Pooling.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Pooling\Pooling\bin\Debug\Pooling.exe.config
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Pooling\Pooling\bin\Debug\Pooling.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Pooling\Pooling\bin\Debug\Pooling.pdb
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Pooling\Pooling\obj\Debug\Pooling.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Pooling\Pooling\obj\Debug\Pooling.pdb

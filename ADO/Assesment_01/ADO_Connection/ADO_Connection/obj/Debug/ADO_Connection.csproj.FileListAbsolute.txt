@@ -1,0 +1,7 @@
+D:\Infinite_training\Training_Repo\ADO\Assesment_01\ADO_Connection\ADO_Connection\bin\Debug\ADO_Connection.exe.config
+D:\Infinite_training\Training_Repo\ADO\Assesment_01\ADO_Connection\ADO_Connection\bin\Debug\ADO_Connection.exe
+D:\Infinite_training\Training_Repo\ADO\Assesment_01\ADO_Connection\ADO_Connection\bin\Debug\ADO_Connection.pdb
+D:\Infinite_training\Training_Repo\ADO\Assesment_01\ADO_Connection\ADO_Connection\obj\Debug\ADO_Connection.csproj.AssemblyReference.cache
+D:\Infinite_training\Training_Repo\ADO\Assesment_01\ADO_Connection\ADO_Connection\obj\Debug\ADO_Connection.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Training_Repo\ADO\Assesment_01\ADO_Connection\ADO_Connection\obj\Debug\ADO_Connection.exe
+D:\Infinite_training\Training_Repo\ADO\Assesment_01\ADO_Connection\ADO_Connection\obj\Debug\ADO_Connection.pdb

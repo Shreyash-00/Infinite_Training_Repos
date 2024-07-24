@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34902.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Link_To_DB", "Link_To_DB\Link_To_DB.csproj", "{E2BB2B69-993E-46C4-8F5D-D39AC9FF0782}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2BB2B69-993E-46C4-8F5D-D39AC9FF0782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BB2B69-993E-46C4-8F5D-D39AC9FF0782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BB2B69-993E-46C4-8F5D-D39AC9FF0782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BB2B69-993E-46C4-8F5D-D39AC9FF0782}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C7D31C1-1FF2-47ED-82F8-4E34B96A1A2F}
+	EndGlobalSection
+EndGlobal

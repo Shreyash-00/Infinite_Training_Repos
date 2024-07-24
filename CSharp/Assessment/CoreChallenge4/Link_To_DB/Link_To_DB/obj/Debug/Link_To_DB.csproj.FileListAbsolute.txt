@@ -1,0 +1,7 @@
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Link_To_DB\Link_To_DB\bin\Debug\Link_To_DB.exe.config
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Link_To_DB\Link_To_DB\bin\Debug\Link_To_DB.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Link_To_DB\Link_To_DB\bin\Debug\Link_To_DB.pdb
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Link_To_DB\Link_To_DB\obj\Debug\Link_To_DB.csproj.AssemblyReference.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Link_To_DB\Link_To_DB\obj\Debug\Link_To_DB.csproj.CoreCompileInputs.cache
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Link_To_DB\Link_To_DB\obj\Debug\Link_To_DB.exe
+D:\Infinite_training\Training_Repo\CSharp\Assessment\CoreChallenge4\Link_To_DB\Link_To_DB\obj\Debug\Link_To_DB.pdb
