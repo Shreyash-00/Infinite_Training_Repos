@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="infiniteDBModelStoreContainer" CdmEntityContainer="infiniteDBEntities">
+    <EntitySetMapping Name="DEPTs">
+      <EntityTypeMapping TypeName="infiniteDBModel.DEPT">
+        <MappingFragment StoreEntitySet="DEPT">
+          <ScalarProperty Name="DEPTNO" ColumnName="DEPTNO" />
+          <ScalarProperty Name="DNAME" ColumnName="DNAME" />
+          <ScalarProperty Name="LOC" ColumnName="LOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPs">
+      <EntityTypeMapping TypeName="infiniteDBModel.EMP">
+        <MappingFragment StoreEntitySet="EMP">
+          <ScalarProperty Name="EMPNO" ColumnName="EMPNO" />
+          <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+          <ScalarProperty Name="JOB" ColumnName="JOB" />
+          <ScalarProperty Name="MGR_ID" ColumnName="MGR_ID" />
+          <ScalarProperty Name="HIREDATE" ColumnName="HIREDATE" />
+          <ScalarProperty Name="SAL" ColumnName="SAL" />
+          <ScalarProperty Name="COMM" ColumnName="COMM" />
+          <ScalarProperty Name="DEPTNO" ColumnName="DEPTNO" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

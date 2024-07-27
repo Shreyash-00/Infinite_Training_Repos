@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="infiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="DEPTNO" />
+          </Key>
+          <Property Name="DEPTNO" Type="int" Nullable="false" />
+          <Property Name="DepName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Budget" Type="float" />
+          <Property Name="Loc" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="EMP">
+          <Key>
+            <PropertyRef Name="EMPNO" />
+          </Key>
+          <Property Name="EMPNO" Type="int" Nullable="false" />
+          <Property Name="ENAME" Type="varchar" MaxLength="20" />
+          <Property Name="JOB" Type="varchar" MaxLength="20" />
+          <Property Name="MGR_ID" Type="int" />
+          <Property Name="HIREDATE" Type="date" />
+          <Property Name="SAL" Type="int" />
+          <Property Name="COMM" Type="int" />
+          <Property Name="DEPTNO" Type="int" />
+          <Property Name="remarks" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_department_department">
+          <End Role="department" Type="Self.department" Multiplicity="1" />
+          <End Role="department1" Type="Self.department" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="DEPTNO" />
+            </Principal>
+            <Dependent Role="department1">
+              <PropertyRef Name="DEPTNO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="infiniteDBModelStoreContainer">
+          <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMP" EntityType="Self.EMP" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_department_department" Association="Self.FK_department_department">
+            <End Role="department" EntitySet="department" />
+            <End Role="department1" EntitySet="department" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="infiniteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="DEPTNO" />
+          </Key>
+          <Property Name="DEPTNO" Type="Int32" Nullable="false" />
+          <Property Name="DepName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Budget" Type="Double" />
+          <Property Name="Loc" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="department1" Relationship="Self.FK_department_department" FromRole="department" ToRole="department1" />
+          <NavigationProperty Name="department2" Relationship="Self.FK_department_department" FromRole="department1" ToRole="department" />
+        </EntityType>
+        <EntityType Name="EMP">
+          <Key>
+            <PropertyRef Name="EMPNO" />
+          </Key>
+          <Property Name="EMPNO" Type="Int32" Nullable="false" />
+          <Property Name="ENAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="JOB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MGR_ID" Type="Int32" />
+          <Property Name="HIREDATE" Type="DateTime" Precision="0" />
+          <Property Name="SAL" Type="Int32" />
+          <Property Name="COMM" Type="Int32" />
+          <Property Name="DEPTNO" Type="Int32" />
+          <Property Name="remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_department_department">
+          <End Role="department" Type="Self.department" Multiplicity="1" />
+          <End Role="department1" Type="Self.department" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="department">
+              <PropertyRef Name="DEPTNO" />
+            </Principal>
+            <Dependent Role="department1">
+              <PropertyRef Name="DEPTNO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="infiniteDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="departments" EntityType="Self.department" />
+          <EntitySet Name="EMPs" EntityType="Self.EMP" />
+          <AssociationSet Name="FK_department_department" Association="Self.FK_department_department">
+            <End Role="department" EntitySet="departments" />
+            <End Role="department1" EntitySet="departments" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="infiniteDBModelStoreContainer" CdmEntityContainer="infiniteDBEntities">
+          <EntitySetMapping Name="departments">
+            <EntityTypeMapping TypeName="infiniteDBModel.department">
+              <MappingFragment StoreEntitySet="department">
+                <ScalarProperty Name="DEPTNO" ColumnName="DEPTNO" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="Loc" ColumnName="Loc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPs">
+            <EntityTypeMapping TypeName="infiniteDBModel.EMP">
+              <MappingFragment StoreEntitySet="EMP">
+                <ScalarProperty Name="EMPNO" ColumnName="EMPNO" />
+                <ScalarProperty Name="ENAME" ColumnName="ENAME" />
+                <ScalarProperty Name="JOB" ColumnName="JOB" />
+                <ScalarProperty Name="MGR_ID" ColumnName="MGR_ID" />
+                <ScalarProperty Name="HIREDATE" ColumnName="HIREDATE" />
+                <ScalarProperty Name="SAL" ColumnName="SAL" />
+                <ScalarProperty Name="COMM" ColumnName="COMM" />
+                <ScalarProperty Name="DEPTNO" ColumnName="DEPTNO" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
