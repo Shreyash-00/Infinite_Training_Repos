@@ -1,0 +1,7 @@
+C:\Users\shreyashs\source\repos\CC_8\CC_8\bin\Debug\CC_8.exe.config
+C:\Users\shreyashs\source\repos\CC_8\CC_8\bin\Debug\CC_8.exe
+C:\Users\shreyashs\source\repos\CC_8\CC_8\bin\Debug\CC_8.pdb
+C:\Users\shreyashs\source\repos\CC_8\CC_8\obj\Debug\CC_8.csproj.AssemblyReference.cache
+C:\Users\shreyashs\source\repos\CC_8\CC_8\obj\Debug\CC_8.csproj.CoreCompileInputs.cache
+C:\Users\shreyashs\source\repos\CC_8\CC_8\obj\Debug\CC_8.exe
+C:\Users\shreyashs\source\repos\CC_8\CC_8\obj\Debug\CC_8.pdb

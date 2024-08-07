@@ -20,6 +20,24 @@ insert into book(id,title,author,isbn,published_date)values
 
 
 
+create table booksss(
+id int primary key,
+title varchar(255),
+author varchar(255),
+isbn int unique,
+published_date datetime);
+
+-- insert values into book table
+
+insert into booksss(id,title,author,isbn,published_date)values
+(1,'My First SQL Book','Mary Pariser',981483029127,'2012-02-22 12:08:17'),
+(2,'My Second SQL Book','John Mayer',867300923713,'1972-07-03 09:22:48'),
+(3,'My Third SQL Book','Cary Flint',523120967812,'2015-10-18 14:06:44');
+
+
+
+
+
 --Get books by Author ending with "er"
 
 Select * from book where author like '%er';

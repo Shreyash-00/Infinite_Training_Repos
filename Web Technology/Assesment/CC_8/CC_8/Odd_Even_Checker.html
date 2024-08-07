@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Odd Even Checker</title>
+    
+</head>
+<body>
+    <div class="text-center">
+        <button id="startBtn">Start</button>
+        </div>
+        <div id="output"></div>
+
+        <script>
+            document.getElementById('startBtn').addEventListener('click', function () {
+                let i = 0;
+                const output = document.getElementById('output');
+
+                function iterate() {
+                    if (i <= 15) {
+                        if (i % 2 === 0) {
+                            output.innerHTML += `${i} is even<br>`;
+                        } else {
+                            output.innerHTML += `${i} is odd<br>`;
+                        }
+                        i++;
+                        setTimeout(iterate, 1000);
+                    }
+                }
+
+                iterate();
+            });
+        </script>
+</body>
+</html>
