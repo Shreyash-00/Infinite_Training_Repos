@@ -5,8 +5,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Form Validator</title>
-
-<!-- Include Basic Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         .error {
@@ -62,7 +60,7 @@
                 <asp:RequiredFieldValidator ID="validatePostalCode" runat="server" ControlToValidate="inputPostalCode"
                     ErrorMessage="* Required" CssClass="error"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="regexPostalCode" runat="server" ControlToValidate="inputPostalCode"
-                    ValidationExpression="\d{6}" ErrorMessage="Format: 123456" CssClass="error"></asp:RegularExpressionValidator>
+                    ValidationExpression="\d{5}" ErrorMessage="Format: 12345" CssClass="error"></asp:RegularExpressionValidator>
             </div>
 
             <div class="form-group">
@@ -71,7 +69,7 @@
                 <asp:RequiredFieldValidator ID="validatePhoneNumber" runat="server" ControlToValidate="inputPhoneNumber"
                     ErrorMessage="* Required" CssClass="error"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="regexPhoneNumber" runat="server" ControlToValidate="inputPhoneNumber"
-                    ValidationExpression="\d{10}|\d{2}-\d{10}" ErrorMessage="Format: 1234567890 or 91-1234567890" CssClass="error"></asp:RegularExpressionValidator>
+                    ValidationExpression="\d{2}-\d{7}|\d{3}-\d{17}" ErrorMessage="Format: 91-3456789 or 911-1234567" CssClass="error"></asp:RegularExpressionValidator>
             </div>
 
             <div class="form-group">

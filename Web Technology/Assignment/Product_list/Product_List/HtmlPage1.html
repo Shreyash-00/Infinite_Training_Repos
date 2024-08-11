@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #productImage {
+            max-width: 300px;
+            max-height: 300px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        #priceLabel {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="container mt-4">
+
+    <h1 class="mb-4">Product Selector</h1>
+
+    <div class="form-group">
+        <label for="productDropdown">Select Product</label>
+        <select id="productDropdown" class="form-control">
+            <option value="">Select a product</option>
+            <option value="1">Tea</option>
+            <option value="2">Sugar</option>
+            <option value="3">Milk</option>
+            <option value="4">Ginger</option>
+        </select>
+    </div>
+
+    <img id="productImage" src="Images/Product.jpg" alt="Product Image" class="img-fluid" />
+    <button class="btn btn-primary" onclick="showPrice()">Get Price</button>
+    <div id="priceLabel" class="mt-2"></div>
+
+    <script>
+        const products = {
+            1: { name: 'Tea', image: 'Images/Tea.jpg', price: '50 Rs' },
+            2: { name: 'Sugar', image: 'Images/Sugar.jpg', price: '57 Rs' },
+            3: { name: 'Milk', image: 'Images/milk.jpg', price: '32 Rs' },
+            4: { name: 'Ginger', image: 'Images/Ginger.jpg', price: '20 Rs' }
+        };
+
+        const productDropdown = document.getElementById('productDropdown');
+        const productImage = document.getElementById('productImage');
+        const priceLabel = document.getElementById('priceLabel');
+
+        productDropdown.addEventListener('change', function() {
+            const selectedProduct = this.value;
+            if (selectedProduct) {
+                const product = products[selectedProduct];
+                productImage.src = product.image;
+                productImage.alt = product.name;
+            } else {
+                productImage.src = '';
+                productImage.alt = '';
+                priceLabel.textContent = '';
+            }
+        });
+
+        function showPrice() {
+            const selectedProduct = productDropdown.value;
+            if (selectedProduct) {
+                const product = products[selectedProduct];
+                priceLabel.textContent = `Price: ${product.price}`;
+            } else {
+                priceLabel.textContent = 'Please select a product.';
+            }
+        }
+    </script>
+
+</body>
+</html>
