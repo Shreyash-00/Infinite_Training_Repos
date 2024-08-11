@@ -1,0 +1,7 @@
+C:\Users\shreyashs\source\repos\Rail_Reservation\Rail_Reservation\obj\Debug\Rail_Reservation.csproj.AssemblyReference.cache
+C:\Users\shreyashs\source\repos\Rail_Reservation\Rail_Reservation\obj\Debug\Rail_Reservation.csproj.CoreCompileInputs.cache
+C:\Users\shreyashs\source\repos\Rail_Reservation\Rail_Reservation\bin\Debug\Rail_Reservation.exe.config
+C:\Users\shreyashs\source\repos\Rail_Reservation\Rail_Reservation\bin\Debug\Rail_Reservation.exe
+C:\Users\shreyashs\source\repos\Rail_Reservation\Rail_Reservation\bin\Debug\Rail_Reservation.pdb
+C:\Users\shreyashs\source\repos\Rail_Reservation\Rail_Reservation\obj\Debug\Rail_Reservation.exe
+C:\Users\shreyashs\source\repos\Rail_Reservation\Rail_Reservation\obj\Debug\Rail_Reservation.pdb
