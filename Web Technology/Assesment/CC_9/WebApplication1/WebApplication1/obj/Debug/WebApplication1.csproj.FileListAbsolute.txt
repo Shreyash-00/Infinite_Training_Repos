@@ -1,0 +1,2 @@
+D:\Infinite_training\Training_Repo\Web Technology\Assesment\CC_9\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\Infinite_training\Training_Repo\Web Technology\Assesment\CC_9\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
