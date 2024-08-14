@@ -3,82 +3,100 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
+using WebApplication1.Repos;
 
 namespace WebApplication1.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies
-        private readonly IMovieRepository _repository;
+        public IMovieRepos movieRepository;
 
         public MoviesController()
         {
-            _repository = new MovieRepository();
+            this.movieRepository = new MovieRepos(new MoviesContext());
         }
+
 
         public ActionResult Index()
         {
-            var movies = _repository.GetAll();
+            var movies = movieRepository.GetAllMovies();
             return View(movies);
         }
 
-        public ActionResult Details(int id)
-        {
-            var movie = _repository.Get(id);
-            return View(movie);
-        }
 
-        [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
 
+
         [HttpPost]
-        public ActionResult Create(Movie movie)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Mid,MovieName,DateOfRelease")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(movie);
+                movieRepository.InsertMovie(movie);
+                movieRepository.Save();
                 return RedirectToAction("Index");
             }
+
             return View(movie);
         }
 
-        [HttpGet]
+
         public ActionResult Edit(int id)
         {
-            var movie = _repository.Get(id);
+            Movie movie = movieRepository.GetMovieById(id);
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
             return View(movie);
         }
 
+
         [HttpPost]
-        public ActionResult Edit(Movie movie)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "Mid,MovieName,DateOfRelease")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                _repository.Update(movie);
+                movieRepository.UpdateMovie(movie);
+                movieRepository.Save();
                 return RedirectToAction("Index");
             }
             return View(movie);
         }
+
 
         public ActionResult Delete(int id)
         {
-            var movie = _repository.Get(id);
+            Movie movie = movieRepository.GetMovieById(id);
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
             return View(movie);
         }
 
+
         [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete_Confirmation(int id)
         {
-            _repository.Delete(id);
+            movieRepository.DeleteMovie(id);
+            movieRepository.Save();
             return RedirectToAction("Index");
         }
 
-        public ActionResult MoviesByYear(int year)
+
+        public ActionResult ReleasedYear(int year)
         {
-            var movies = _repository.GetMoviesByYear(year);
+            var movies = movieRepository.GetAllMovies()
+                                         .Where(m => m.DateOfRelease.Year == year)
+                                         .ToList();
             return View(movies);
         }
     }

@@ -1,54 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using WebApplication1.Models;
 
 namespace WebApplication1.Repos
 {
     public class MovieRepos : IMovieRepos
     {
-        private readonly MoviesContext _context;
+        private MoviesContext context;
 
-        public MovieRepository()
+        public MovieRepos(MoviesContext context)
         {
-            _context = new MoviesContext();
+            this.context = context;
         }
 
-        public IEnumerable<Movie> GetAll()
+        public IEnumerable<Movie> GetAllMovies()
         {
-            return _context.Movies.ToList();
+            return context.Movies.ToList();
         }
 
-        public Movie Get(int id)
+        public Movie GetMovieById(int id)
         {
-            return _context.Movies.Find(id);
+            return context.Movies.Find(id);
         }
 
-        public void Add(Movie movie)
+        public void InsertMovie(Movie movie)
         {
-            _context.Movies.Add(movie);
-            _context.SaveChanges();
+            context.Movies.Add(movie);
         }
 
-        public void Update(Movie movie)
+        public void UpdateMovie(Movie movie)
         {
-            _context.Entry(movie).State = EntityState.Modified;
-            _context.SaveChanges();
+            context.Entry(movie).State = EntityState.Modified;
         }
 
-        public void Delete(int id)
+        public void DeleteMovie(int id)
         {
-            var movie = _context.Movies.Find(id);
+            Movie movie = context.Movies.Find(id);
             if (movie != null)
             {
-                _context.Movies.Remove(movie);
-                _context.SaveChanges();
+                context.Movies.Remove(movie);
             }
         }
 
-        public IEnumerable<Movie> GetMoviesByYear(int year)
+        public void Save()
         {
-            return _context.Movies.Where(m => m.DateOfRelease.Year == year).ToList();
+            context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            context.Dispose();
         }
     }
 }
