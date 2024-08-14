@@ -7,7 +7,7 @@ namespace WebApplication1.Models
 {
     public class MoviesContext : DbContext
     {
-        public MoviesContext() : base("name=MoviesDB") // Name matches the connection string
+        public MoviesContext() : base("name=MoviesDB")
         {
         }
 
