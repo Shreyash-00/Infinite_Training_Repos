@@ -92,11 +92,24 @@ namespace WebApplication1.Controllers
         }
 
 
-        public ActionResult ReleasedYear(int year)
+        public ActionResult ReleasedYear(int? year)
         {
+            if (!year.HasValue)
+            {
+                // Redirect to a different action or return a view indicating the missing year
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest, "Year is required");
+            }
+
             var movies = movieRepository.GetAllMovies()
-                                         .Where(m => m.DateOfRelease.Year == year)
-                                         .ToList();
+                                        .Where(m => m.DateOfRelease.Year == year.Value)
+                                        .ToList();
+
+            if (!movies.Any())
+            {
+                ViewBag.Message = "No movies found for the selected year.";
+            }
+
+            ViewBag.Year = year.Value;
             return View(movies);
         }
     }
